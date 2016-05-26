@@ -17,10 +17,12 @@ Technologies used:
 
 
 1. configure Jersey ServletContainer in web.xml.
+
 <--
 	java.tutorial.ws.rest is the path where container looks for the controller classes
     {ontextpath}/rest/* restful web services request path. Here sun jersey container used, there are different vendors are available in open market, for all implementation is same.
 -->
+
 
 	<servlet>
 		<servlet-name>jersey-serlvet</servlet-name>
@@ -59,23 +61,37 @@ GET
 ======================================================
 
 3. Text response :
+
 Ref: getMessageText
+
 URL : http://localhost:8080/rest/text/messages/1
+
 Response : JAX-RS Implementation using Jersey [Message id = 1 ]
 
-4. XML Response
+4. XML Response:
+
 Ref: getMessageXML
+
 URL : http://localhost:8080/rest/xml/messages/4
+
 Response :
+
 <message>
+
    <description>JAX-RS Implementation using Jersey [Message id = 4 ]</description>
+   
    <messageId>4</messageId>
+   
 </message>
 
 
+
 5. JSON Response
+
 URL : http://localhost:8080/rest/json/messages/4
+
 Ref: getMessageJSON
+
 Response :
 {
    "description": "JAX-RS Implementation using Jersey [Message id = 4 ]",
@@ -83,11 +99,18 @@ Response :
 }
 
 6. XML Response (ordering properties)
+
 URL : http://localhost:8080/rest/xml/messages/4
+
 Add @XmlType(propOrder={"messageId","description"}) on Message Class
+
 Ref: getMessageXML
+
 URL : http://localhost:8080/rest/txml/messages/4
+
 Response :
+
+
 <message>
    <messageId>4</messageId>
    <description>JAX-RS Implementation using Jersey [Message id = 4 ]</description>
