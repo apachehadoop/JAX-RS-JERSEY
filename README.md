@@ -7,6 +7,7 @@ Technologies used:
 - Tomcat 7.0
 - Maven 3.0.3
 - Eclipse Luna
+
 ### Configure Jersey ServletContainer in web.xml.
 
 ```
@@ -31,7 +32,9 @@ Technologies used:
 		<url-pattern>/rest/*</url-pattern>
 	</servlet-mapping>
 ```
+
 ### Create controller class map requests
+
 URL : http://localhost:8080/rest/messages/1
 
 Response : JAX-RS Implementation using Jersey [Message id = 1 ]
