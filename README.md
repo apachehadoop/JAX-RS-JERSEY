@@ -5,9 +5,13 @@ REST WebServices using Jersey and JAX-RS (JSR 311) specification.
 Technologies used:
 
 1.Jersey 1.19.1
+
 2.JDK 1.7
+
 3.Tomcat 7.0
+
 4.Maven 3.0.3
+
 5.Eclipse Luna
 
 
