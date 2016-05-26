@@ -7,7 +7,7 @@ Technologies used:
 - Tomcat 7.0
 - Maven 3.0.3
 - Eclipse Luna
-## Configure Jersey ServletContainer in web.xml.
+### Configure Jersey ServletContainer in web.xml.
 
 ```
 	java.tutorial.ws.rest is the path where container looks for the controller classes
