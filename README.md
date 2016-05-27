@@ -2,7 +2,7 @@
 REST WebServices using Jersey and JAX-RS (JSR 311) specification.
 
 Technologies used:
-- 1.Jersey 1.19.1
+- Jersey 1.19.1
 - JDK 1.7
 - Tomcat 7.0
 - Maven 3.0.3
@@ -124,4 +124,80 @@ Response: JSON
 	"messageId":"99",
 	"description":"JAX-RS Implementation using Jersey [Message id = 99 ]"
 }
+```
+
+
+#PUT
+
+```
+Consumes XML and Produces XML
+Ref: updateMesageFromXML
+Use POSTMAN Tool -  for Testing
+Request : Use Raw and Content-Type=application/xml
+<message>
+   <messageId>555</messageId>
+   <description>JAX-RS Implementation using Jersey [Message id = 555 ]</description>
+</message>
+
+Response: XML
+<message>
+   <messageId>555</messageId>
+   <description>JAX-RS Implementation using Jersey [Message id = 555 ]</description>
+</message>
+
+```
+```
+Consumes JSON and Produces JSON
+Ref: updateMesageFromJSON
+Request : Use Raw data Content-Type=application/json
+{
+	"messageId":"9998",
+	"description":"JAX-RS Implementation using Jersey [Message id = 9998 ]"
+}
+Response: JSON
+{
+	"messageId":"9998",
+	"description":"JAX-RS Implementation using Jersey [Message id = 9998 ]"
+}
+```
+
+#DELETE
+
+```
+URL http://localhost:8081/rest/messages/1
+
+Ref: deleteMesage
+
+Use POSTMAN Tool -  for Testing
+
+```
+
+#Path Variable
+
+
+```
+URL : http://localhost:8081/rest/messages/1
+Ref: getMessagePathVariable
+
+Response:
+<message>
+    <messageId>1</messageId>
+    <description>Use of path variable @PathParam(&quot;messageId&quot;) String messageId</description>
+</message>
+
+```
+
+#Query Param
+
+
+```
+URL : http://localhost:8081/rest/messages/message?year=2016&month=2
+Ref: getMessagePathVariable
+
+Response: produces XML 
+<message>
+<messageId>20162</messageId>
+<description> Using query param</description>
+</message>
+
 ```
