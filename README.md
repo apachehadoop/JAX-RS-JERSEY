@@ -91,3 +91,37 @@ Response :
    <description>JAX-RS Implementation using Jersey [Message id = 4 ]</description>
 </message>
 ```
+
+#POST
+
+```
+Consumes XML and Produces XML
+Ref: addMesageFromXML
+Use POSTMAN Tool -  for Testing
+Request : Use Raw and Content-Type=application/xml
+<message>
+   <messageId>5</messageId>
+   <description>JAX-RS Implementation using Jersey [Message id = 5 ]</description>
+</message>
+
+Response: XML
+<message>
+   <messageId>5</messageId>
+   <description>JAX-RS Implementation using Jersey [Message id = 5 ]</description>
+</message>
+
+```
+```
+Consumes JSON and Produces JSON
+Ref: addMesageFromJSON
+Request : Use Raw data Content-Type=application/json
+{
+	"messageId":"99",
+	"description":"JAX-RS Implementation using Jersey [Message id = 99 ]"
+}
+Response: JSON
+{
+	"messageId":"99",
+	"description":"JAX-RS Implementation using Jersey [Message id = 99 ]"
+}
+```
