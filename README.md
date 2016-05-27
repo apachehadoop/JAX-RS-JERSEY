@@ -201,3 +201,15 @@ Response: produces XML
 </message>
 
 ```
+
+#Matrix Params and Custom Headers
+
+```
+URL : http://localhost:8081/rest/messages/matrixparam;matrixparam=matrixvalue
+<message>
+	<messageId>matrixvalue Sreenivasa</messageId>
+	<description> Matrix Param and Custom Header Param</description>
+</message>
+Ref:matrixParams
+
+```

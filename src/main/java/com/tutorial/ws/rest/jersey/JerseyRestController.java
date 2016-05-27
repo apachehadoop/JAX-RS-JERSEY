@@ -3,6 +3,8 @@ package com.tutorial.ws.rest.jersey;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DELETE;
 import javax.ws.rs.GET;
+import javax.ws.rs.HeaderParam;
+import javax.ws.rs.MatrixParam;
 import javax.ws.rs.POST;
 import javax.ws.rs.PUT;
 import javax.ws.rs.Path;
@@ -97,6 +99,14 @@ public class JerseyRestController {
 	@Produces(MediaType.APPLICATION_XML)
 	public Response queryParams(@QueryParam("year") int year, @QueryParam("month") int month){
 		Message message = new Message(year+""+month, " Using query param");
+		return Response.status(Status.OK).entity(message).build();
+	}
+	
+	@GET
+	@Path("/matrixparam")
+	@Produces(MediaType.APPLICATION_XML)
+	public Response matrixParams(@MatrixParam("matrixparam")String value, @HeaderParam("customparam") String customHeader){
+		Message message = new Message(value+" "+customHeader, " Matrix Param and Custom Header Param");
 		return Response.status(Status.OK).entity(message).build();
 	}
 	
